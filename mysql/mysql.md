@@ -11,3 +11,7 @@
 - 通过计算，得出截取前12个字符，跟全值区分度差不多。将url截取12个字符，然后转为hash数值,存储到url_crc32字段上。
 - update url_test_2 set url_crc32=CRC32(LEFT(url,7));
 - ![结果](url_test_result.png)
+
+
+2.IP数据怎么存储?
+答：INET_ATON函数将IP转为数值存储，INET_NTOA将数值转为IP。转为数值后，还支持IP段的查询。
